@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小米商城</title>
+    <!-- 引入图标-->
+    <link rel="icon" href="./favicon.ico" />
+    <!-- 基础设置css-->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- 头部内容的css-->
+    <link rel="stylesheet" href="./css/home-head.css" />
+    <!-- 中心内容的css-->
+    <link rel="stylesheet" href="./css/home-center.css" />
+    <!-- 主要内容的css-->
+    <link rel="stylesheet" href="./css/home-main.css" />
+    <!-- 底部内容的css-->
+    <link rel="stylesheet" href="./css/home-footer.css" />
+    <!-- 引入字体图标-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://at.alicdn.com/t/font_2489982_hpinat5faco.css"
+    />
+  </head>
+  <!-- 轮播图的js-->
+  <script type="text/javascript" src="js/swiper.js"></script>
+  <!-- 主体的js-->
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <body>
+    <div id="app">
+      <!-- 头部全部内容开始-->
+      <div class="header">
+        <!-- 顶部导航栏开始-->
+        <div class="site-topbar">
+          <!-- 顶部导航栏版心-->
+          <div class="container">
+            <!--  顶部导航栏左边内容部分  -->
+            <div class="topbar-nav">
+              <a href="javascript:;">小米商城</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">MIUI</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">loT</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">云服务</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">天行数科</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">小爱同学</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">企业团购</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">协议规则</a>
+              <span class="sep">|</span>
+              <!-- 二维码图标  -->
+              <a href="javascript:;" id="J_topbarApp" class="topbar-download"
+                >下载app
+                <span class="download-png">
+                  <img src="./image/download.png" />
+                  小米商城APP
+                </span>
+                <span class="sep">|</span>
+              </a>
+              <a href="javascript:;">Select Location</a>
+            </div>
+            <!--  顶部导航栏右边内容部分  -->
+            <!--  顶部导航栏右边购物车  -->
+            <div id="J_topbarCart" class="topbar-cart">
+              <a href="./shopping.html" class="cart">
+                <!--  字体图标  -->
+                <span class="iconfont icon-gouwuchekong"></span>
+                <!--  顶部购物车  -->
+                <span>购物车</span>
+                <span>(0)</span>
+                <span class="cart-menu">
+                  <!--  JS加载动画效果  -->
+                  <div id="J_loadCart" class="loading"></div>
+                  <span class="loader-on"></span>
+                </span>
+              </a>
+            </div>
+            <!--  顶部导航栏右边信息栏 -->
+            <div class="topbar-info">
+              <a href="javascript:;">登录</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">注册</a>
+              <span class="sep">|</span>
+              <a href="javascript:;">消息通知</a>
+            </div>
+          </div>
+        </div>
+        <!-- 顶部导航栏结束-->
+
+        <!-- 头部内容开始-->
+        <!-- 头部导航栏-->
+        <div class="site-header">
+          <div class="container">
+            <!--头部logo-->
+            <div id="J_cs" class="header-logo">
+              <a href="javascript:;"
+                ><img src="./image/logo.png" height="56px" width="56px" />
+              </a>
+            </div>
+            <!--头部导航-->
+            <div class="header-nav">
+              <ul id="J_navList" class="nav-list">
+                <li class="J_navItem nav-item">
+                  <a href="javascript:;" class="red">Xiaomi手机</a>
+                </li>
+                <li class="J_navItem nav-item">
+                  <a href="javascript:;" class="red">Redmi手机</a>
+                </li>
+                <li class="J_navItem nav-item">
+                  <a href="javascript:;" class="red">电视</a>
+                </li>
+                <li class="J_navItem nav-item">
+                  <a href="javascript:;" class="red">笔记本</a>
+                </li>
+                <li class="J_navItem nav-item">
+                  <a href="javascript:;" class="red"> 平板</a>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:;" class="red"> 家电</a>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:;" class="red"> 路由器</a>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:;" class="red"> 服务</a>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:;" class="red"> 社区</a>
+                </li>
+              </ul>
+            </div>
+            <!--头部搜索框-->
+            <div class="header-search">
+              <input type="text" placeholder="xiaomi" class="search-txt" />
+              <a href="javascript:;" class="search-btn">
+                <i class="iconfont icon-search icon-fangdajing"></i>
+              </a>
+            </div>
+          </div>
+          <!-- JS头部显示与隐藏下拉菜单-->
+          <div id="J_headerNavMenu" class="header-nav-menu">
+            <div class="container">
+              <ul class="children-list clearfix" style="display: none">
+                <li class="children-frist">
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-1.webp" />
+                    </div>
+                    <div>Xiaomi 12 Pro</div>
+                    <p>4699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-1.webp" />
+                    </div>
+                    <div>Xiaomi 12 Pro</div>
+                    <p>4699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-1.webp" />
+                    </div>
+                    <div>Xiaomi 12 Pro</div>
+                    <p>4699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-1.webp" />
+                    </div>
+                    <div>Xiaomi 12 Pro</div>
+                    <p>4699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-1.webp" />
+                    </div>
+                    <div>Xiaomi 12 Pro</div>
+                    <p>4699元起</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="children-list clearfix" style="display: none">
+                <li class="children-frist">
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-2.webp" />
+                    </div>
+                    <div>Redmi K40S</div>
+                    <p>1799元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-2.webp" />
+                    </div>
+                    <div>Redmi K40S</div>
+                    <p>1799元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-2.webp" />
+                    </div>
+                    <div>Redmi K40S</div>
+                    <p>1799元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-2.webp" />
+                    </div>
+                    <div>Redmi K40S</div>
+                    <p>1799元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-2.webp" />
+                    </div>
+                    <div>Redmi K40S</div>
+                    <p>1799元起</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="children-list clearfix" style="display: none">
+                <li class="children-frist">
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-3.webp" />
+                    </div>
+                    <div>小米电视6 65″ OLED</div>
+                    <p>8699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-3.webp" />
+                    </div>
+                    <div>小米电视6 65″ OLED</div>
+                    <p>8699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-3.webp" />
+                    </div>
+                    <div>小米电视6 65″ OLED</div>
+                    <p>8699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-3.webp" />
+                    </div>
+                    <div>小米电视6 65″ OLED</div>
+                    <p>8699元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-3.webp" />
+                    </div>
+                    <div>小米电视6 65″ OLED</div>
+                    <p>8699元起</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="children-list clearfix" style="display: none">
+                <li class="children-frist">
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-4.webp" />
+                    </div>
+                    <div>Redmi Book Pro 14 2022</div>
+                    <p>5399元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-4.webp" />
+                    </div>
+                    <div>Redmi Book Pro 14 2022</div>
+                    <p>5399</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-4.webp" />
+                    </div>
+                    <div>Redmi Book Pro 14 2022</div>
+                    <p>5399</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-4.webp" />
+                    </div>
+                    <div>Redmi Book Pro 14 2022</div>
+                    <p>5399</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-4.webp" />
+                    </div>
+                    <div>Redmi Book Pro 14 2022</div>
+                    <p>5399</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="children-list clearfix" style="display: none">
+                <li class="children-frist">
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-5.webp" />
+                    </div>
+                    <div>小米平板5 Pro</div>
+                    <p>1999元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-5.webp" />
+                    </div>
+                    <div>小米平板5 Pro</div>
+                    <p>1999元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-5.webp" />
+                    </div>
+                    <div>小米平板5 Pro</div>
+                    <p>1999元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-5.webp" />
+                    </div>
+                    <div>小米平板5 Pro</div>
+                    <p>1999元起</p></a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><div class="header-menu-img">
+                      <img src="./image/children-5.webp" />
+                    </div>
+                    <div>小米平板5 Pro</div>
+                    <p>1999元起</p></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 头部内容结束-->
+      </div>
+      <!-- 头部全部内容结束-->
+      <!-- 中心全部内容开始-->
+      <div class="conter container">
+        <!--上半部开始-->
+        <div class="conter-left">
+          <!--左侧导航框-->
+          <ul class="left-list">
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >手机<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >电视<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >笔记本<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >平板<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >家电<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >路由器<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >音响<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >耳机<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >生活<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+            <li class="left-list-item">
+              <a href="javascript:;"
+                >钱包<i class="iconfont icon-jiantouyou"></i
+              ></a>
+            </li>
+          </ul>
+          <!--导航轮播图-->
+          <div id="swiper" class="swiper">
+            <div class="swiper-box">
+              <!--轮播图-->
+              <ul id="J_swiperUl">
+                <li>
+                  <a href="javascript:;" class="swiper-one"
+                    ><img src="./image/1.jpg"
+                  /></a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="./image/swp-1.jpg" /></a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="./image/swp-2.jpg" /></a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="./image/swp-3.jpg" /></a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="./image/swp-4.jpg" /></a>
+                </li>
+              </ul>
+              <!--轮播图下面的小圆点-->
+              <ol class="swpier-bar"></ol>
+              <!--左右箭头-->
+              <div>
+                <span class="J_btn swpier-left"
+                  ><i class="iconfont icon-xiangzuojiantou"></i
+                ></span>
+                <span class="J_btn swpier-right"
+                  ><i class="iconfont icon-xiangyoujiantou"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--上半部开始结束-->
+        <!--下半部开始开始-->
+        <div class="conter-bottom">
+          <!--底部左侧-->
+          <div class="bottom-span1">
+            <ul class="span1-ico">
+              <li>
+                <a href="javascript:;" class="span1-color">
+                  <div class="iconfont icon-time"></div>
+                  服务保障
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="span1-color">
+                  <div class="iconfont icon-qiye"></div>
+                  企业团购
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="span1-color">
+                  <div class="iconfont icon-chongzhi1"></div>
+                  在线充值
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="span1-color">
+                  <div class="iconfont icon-simqia"></div>
+                  米粉卡
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="span1-color">
+                  <div class="iconfont icon-shouye"></div>
+                  以旧换新
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="span1-color">
+                  <div class="iconfont icon-chongzhi"></div>
+                  手机充值
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--底部-右侧-->
+          <div class="bottom-span2">
+            <ul class="span2-img">
+              <li>
+                <a href="javascript:;"
+                  ><img src="./image/bottom-1.jpg" width="316px" height="170px"
+                /></a>
+              </li>
+              <li>
+                <a href="javascript:;"
+                  ><img src="./image/bottom-2.jpg" width="316px" height="170px"
+                /></a>
+              </li>
+              <li>
+                <a href="javascript:;"
+                  ><img src="./image/bottom-3.jpg" width="316px" height="170px"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--下半部开始结束-->
+      </div>
+      <!-- 中心全部内容结束-->
+      <!-- 首页主要的内容开始-->
+      <div class="main-page">
+        <div class="container">
+          <!--中间广告-->
+          <div class="main-banner-box">
+            <a href="javascript:;"
+              ><img src="./image/banner.jpg" width="1226px"
+            /></a>
+          </div>
+          <!--手机展示区-->
+          <div class="box-ph">
+            <h2 class="title">手机</h2>
+            <span class="more"
+              ><a href="javascript:;" class="red"
+                >查看更多<span class="iconfont icon-jinrujiantouxiao"></span></a
+            ></span>
+          </div>
+          <!--销售展示区-->
+          <div class="app-banner">
+            <div class="app-left app-up">
+              <ul>
+                <li>
+                  <a href="javascript:;">
+                    <img src="./image/m1.jpg" width="234px" height="614px" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="app-right app-up">
+              <ul>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"
+                    ><img src="./image/m2.jpg" width="160px" height="160px" />
+                    <h3 class="title">Redmi K50 电竞版</h3>
+                    <p class="intro">全线拉满的冷血旗舰</p>
+                    <p class="price">3299元</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 首页主要的内容结束-->
+      <!-- 底部的内容开始-->
+      <div class="main-footer">
+        <div class="site-footer">
+          <div class="container"></div>
+        </div>
+        <div class="footer-info"></div>
+      </div>
+      <!-- 底部的内容结束-->
+
+      <!-- 右侧固定导航工具-->
+      <div class="main-tool-bar">
+        <ul class="tool-bar-item">
+          <li>
+            <a href="###" class="tool-banner red">
+              <div class="iconfont icon-shouji"></div>
+              <span>手机APP</span>
+              <div class="tool-item-banner">
+                <img src="./image/download.png" />
+                <p>扫码领取新</p>
+                <p>人百元礼包</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="###" class="red">
+              <div class="iconfont icon-banshou"></div>
+              <span>售后服务</span>
+            </a>
+          </li>
+          <li>
+            <a href="###" class="red">
+              <div class="iconfont icon-rengong2"></div>
+              <span>人工服务</span>
+            </a>
+          </li>
+          <li>
+            <a href="###" class="red">
+              <div class="iconfont icon-xiazai"></div>
+              <span>个人中心</span>
+            </a>
+          </li>
+          <li>
+            <a href="./shopping.html" class="red">
+              <div class="iconfont icon-gouwuchekong"></div>
+              <span>购物车</span>
+            </a>
+          </li>
+          <li class="top">
+            <a href="#" class="red">
+              <div class="iconfont icon-jiantou_shangyiye"></div>
+              <span>回到顶部</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- 右侧固定导航工具-->
+    </div>
+  </body>
+</html>

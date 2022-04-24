@@ -1,0 +1,58 @@
+/* --为自定义常用css属性*/
+:root {
+  --red: #ff6700;
+  --black: #333;
+  --min-width: 1226px;
+  --white: #b0b0b0;
+  --pureWhite:#fff;
+  --gray:#424242;
+}
+
+/* 清除浮动*/
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+/* 整体属性设置*/
+* {
+  margin: 0 ; 
+  padding: 0 ; 
+  list-style: none;
+  resize: none;
+}
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+#app{
+    color: var(--black);
+    min-width: var(--min-width);
+    height: 100vh;
+}
+img {
+    -webkit-user-drag:none;
+}
+/* 公共属性设置*/
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.red:hover {
+    color: var(--red) !important;
+    transition: color 0.3s;
+}
+
+/* 版心 */
+.container {
+    position: relative;
+    width: var(--min-width);
+    margin-right: auto;
+    margin-left: auto;
+}
