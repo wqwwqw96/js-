@@ -69,7 +69,6 @@ window.onload = function () {
     }
     ]
     // 获取元素
-    var oBox = document.getElementById("box")
     var oCar = document.querySelector(".list-box")
     var oUl = document.getElementById("addUl")
     //为每个商品添加节点
@@ -87,7 +86,7 @@ window.onload = function () {
     }
     //-----------点击加入购物车----------------------
     // 获取box下所有的添加购物车按钮
-    var addBtn = oBox.querySelectorAll(".add_btn")
+    var addBtn = oUl.querySelectorAll(".add_btn")
     for (var i = 0; i < addBtn.length; i++) {
         //给每个按钮添加序号
         addBtn[i].value = i;
@@ -105,8 +104,8 @@ window.onload = function () {
             addDiv.innerHTML += '<div class="col col-total" data-total="' + data["proPrice"] + '">' + data["proPrice"] + '元</div>'
             addDiv.innerHTML += '<div class="col col-action"><a href="javascript:void(0)"><i class="iconfont icon-cuo"></i></a></div> '
             oCar.appendChild(addDiv)
+
             //获取商品的选择框
-            var btnActive = document.querySelector("#btn")
             var oCheck = addDiv.querySelector(".check")
             //console.log(oCheck)
             //选中需要的商品
@@ -114,7 +113,6 @@ window.onload = function () {
                 if (oCheck.getAttribute("value") == "0") {
                     oCheck.classList.add("check-active")
                     oCheck.classList.remove("enter")
-                    btnActive.classList.remove('btn-disabled')
                     oCheck.setAttribute("value", "1")
                 }
                 else {
@@ -130,10 +128,10 @@ window.onload = function () {
             //删除商品
             var removeDiv = addDiv.querySelector(".col-action a")
             removeDiv.onclick = function () {
-                var result= confirm("确定要删除吗？")
-                if(result){
-                oCar.removeChild(addDiv)
-                getTotal()
+                var result = confirm("确定要删除吗？")
+                if (result) {
+                    oCar.removeChild(addDiv)
+                    getTotal()
                 }
             }
             //添加商品数量
@@ -145,7 +143,7 @@ window.onload = function () {
             addBtn.onclick = function () {
                 numBtn.value = Number(numBtn.value) + 1
                 if (numBtn.value > 10) {
-                    alert('最大数量10')
+                    alert('最大数量为10')
                     numBtn.value = 10
                 }
                 dataTotal = Number(numBtn.value) * Number(data["proPrice"])
@@ -197,7 +195,6 @@ window.onload = function () {
 //点击全选按钮
 function allCheck() {
     var oAllCheck = document.querySelectorAll(".check")
-    var btnActive = document.querySelector("#btn")
     if (oAllCheck[0].getAttribute("value") == "0") {
         value = false
     }
@@ -214,8 +211,6 @@ function allCheck() {
                 oAllCheck[i].classList.add("check-active")
                 oAllCheck[i].setAttribute("value", "1")
                 oAllCheck[i].classList.remove("enter")
-                btnActive.classList.remove('btn-disabled')
-
             }
             else {
                 oAllCheck[0].classList.remove("check-active2")
@@ -224,7 +219,6 @@ function allCheck() {
                 oAllCheck[i].classList.remove("check-active")
                 oAllCheck[i].setAttribute("value", "0")
                 oAllCheck[i].classList.add("enter")
-                btnActive.classList.add('btn-disabled')
             }
         }
 
@@ -235,12 +229,21 @@ function allCheck() {
 //得到总价与个数
 function getTotal() {
     var activeCheck = document.querySelectorAll(".check-active")
+    //获取底部去结算按钮
+    var btnActive = document.querySelector("#btn")
     //console.log(activeCheck.length)
     var allNum = document.querySelector(".allNum")
     //console.log(allNum)
     //获取选中的个数
     var num = activeCheck.length
     allNum.innerHTML = num
+    //当有商品时点亮去结算按钮
+    if (num > 0) {
+        btnActive.classList.remove("btn-disabled")
+    }
+    else {
+        btnActive.classList.add("btn-disabled")
+    }
     //获取选中的总价
     var allPrice = document.querySelector(".all-price")
     var total = 0
